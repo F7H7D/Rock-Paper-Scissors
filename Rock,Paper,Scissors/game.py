@@ -16,6 +16,9 @@ while True:
     computer = random.choice([1,2,3])
     youstr = input("Enter your choice : ")
     youdict = {"r":1,"p":2,"s":3}
+    if youstr not in youdict :
+        print("Please choose between (r/p/s)")
+        continue
     you = youdict[youstr]
     reversedict = {1:"Rock✊",2:"Paper✋",3:"scissors✌"}
 
@@ -27,8 +30,6 @@ while True:
         draw += 1
         print("It's a draw.")
 
-    if youstr not in youdict :
-        print("Please choose between (r/p/s)")
 
     else:
         if computer == 1 and you == 3 :
@@ -65,7 +66,7 @@ while True:
     print(f"You wins : {you_win}")
     print(f"Computer wins : {computer_win}")
 
-    user = input("If you want to exit the game then click (E) : ")
+    user = input("If you want to exit the game then click (E) or if you want play again then click on Enter : ")
 
     if user.lower() == "e":
         print("Game over!!")
